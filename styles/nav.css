@@ -57,13 +57,38 @@ body {
   z-index: 1000;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background: rgb(89, 81, 226);
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 40%,
+    rgba(5, 4, 121, 1) 49%,
+    rgba(9, 9, 250, 1) 67%,
+    rgba(0, 212, 255, 1) 91%,
+    rgba(0, 212, 255, 1) 95%,
+    rgba(0, 212, 255, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 40%,
+    rgba(5, 4, 121, 1) 49%,
+    rgba(9, 9, 250, 1) 67%,
+    rgba(0, 212, 255, 1) 91%,
+    rgba(0, 212, 255, 1) 95%,
+    rgba(0, 212, 255, 1) 99%
+  );
   background: linear-gradient(
     90deg,
-    rgba(89, 81, 226, 1) 0%,
-    rgba(123, 121, 255, 1) 22%,
-    rgba(68, 224, 255, 1) 100%
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 40%,
+    rgba(5, 4, 121, 1) 49%,
+    rgba(9, 9, 250, 1) 67%,
+    rgba(0, 212, 255, 1) 91%,
+    rgba(0, 212, 255, 1) 95%,
+    rgba(0, 212, 255, 1) 99%
   );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
 }
 .navbar {
   padding: 0;
@@ -86,18 +111,18 @@ body {
 }
 .navbar-light .navbar-toggler-icon {
   width: 24px;
-  height: 17px;
+  height: 19px;
   background-image: none;
   position: relative;
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid whitesmoke;
   transition: all 300ms linear;
 }
 .navbar-light .navbar-toggler-icon:after,
 .navbar-light .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
-  height: 1px;
-  background-color: #000;
+  height: 3px;
+  background-color: whitesmoke;
   top: 0;
   left: 0;
   content: "";
@@ -399,7 +424,7 @@ body.hero-anime #switch {
 .dropdown-item:hover,
 .dropdown-item:focus {
   color: #fff;
-  background-color: rgba(129, 103, 169, 0.6);
+  background-color: rgba(7, 193, 255, 0.6);
 }
 
 body.dark {
@@ -514,9 +539,6 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-/* #Link to page
-================================================== */
-
 .logo {
   position: absolute;
   bottom: 30px;
@@ -533,6 +555,44 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .brand-name {
+  font-size: 3.5rem;
+  transition: font-size 0.3s ease;
   font-family: "Original Surfer", cursive;
   color: #00ffff;
 }
+
+@media screen and (max-width: 768px) {
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
+.hydro-logo {
+  max-width: 100%;
+  height: auto;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .hydro-logo {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    display: block;
+  }
+}
+
