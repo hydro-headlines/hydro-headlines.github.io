@@ -17,6 +17,10 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   transition: all 200ms linear;
+  background-image: url("../static/bg-2.png");
+  /* Additional background properties if needed */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 ::selection {
   color: #fff;
@@ -596,3 +600,16 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.snapshot-image {
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+  max-width: 90%;
+}

@@ -3,8 +3,42 @@
   <head id="top">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://hydro-headlines.github.io/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hydro Headlines" />
+    <meta
+      property="og:description"
+      content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
+    />
+    <meta property="og:image" content="/static/snapshot.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:domain"
+      content="4e38-116-73-243-165.ngrok-free.app"
+    />
+    <meta
+      property="twitter:url"
+      content="htts://hydro-headlines.github.io/"
+    />
+    <meta name="twitter:title" content="Hydro Headlines" />
+    <meta
+      name="twitter:description"
+      content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
+    />
+    <meta name="twitter:image" content="./static/snapshot.png" />
     <title>Hydro Headlines</title>
-    <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -27,7 +61,8 @@
                 href="https://front.codes/"
                 target="_blank"
                 ><img src="./static/logo.gif" alt="hydro-logo"
-              /></a><h1 class="brand-name">Hydro Headlines</h1>
+              /></a>
+              <h1 class="brand-name">Hydro Headlines</h1>
 
               <button
                 class="navbar-toggler"
@@ -63,6 +98,7 @@
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                     <a class="nav-link" href="#">Home</a>
                   </li>
+                  <!--
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                     <a
                       class="nav-link dropdown-toggle"
@@ -74,16 +110,21 @@
                       >News</a
                     >
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Clan News</a>
-                      <a class="dropdown-item" href="#">General News</a>
-                      <a class="dropdown-item" href="#">Miscellaneous</a>
+                      <a class="dropdown-item" href="" class="hydro-disabled">Clan News</a>
+                      <a class="dropdown-item" href="" class="hydro-disabled">General News</a>
+                      <a class="dropdown-item" href="" class="hydro-disabled">Miscellaneous</a>
                     </div>
                   </li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                    <a class="nav-link" href="#">Socials</a>
-                  </li>
+                    <a class="nav-link" href="" class="hydro-disabled">Socials</a>
+                  </li>-->
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a
+                      class="nav-link"
+                      href="https://discord.gg/XDrfcjQJqZ "
+                      target="_blank"
+                      >Contact</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -92,9 +133,8 @@
         </div>
       </div>
     </div>
-
-    <a href="#top" class="logo">
-      <img src="https://img.freepik.com/free-icon/up-arrow_318-576360.jpg" alt="" />
-    </a>
+    <div class="image-container">
+      <img src="./static/snapshot.png" alt="snapshot" class="snapshot-image" />
+    </div>
   </body>
 </html>
