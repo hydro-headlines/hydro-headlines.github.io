@@ -17,10 +17,6 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   transition: all 200ms linear;
-  background-image: url("../static/bg-2.png");
-  /* Additional background properties if needed */
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 ::selection {
   color: #fff;
@@ -630,4 +626,8 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #0066cc, #004499);
+}
+
+#no-js-hydro {
+  display: none;
 }

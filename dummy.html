@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+  <head id="top">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://hydro-headlines.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hydro Headlines" />
+    <meta
+      property="og:description"
+      content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
+    />
+    <meta property="og:image" content="https://i.imgur.com/QyjkN1R.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:domain"
+      content="4e38-116-73-243-165.ngrok-free.app"
+    />
+    <meta property="twitter:url" content="htts://hydro-headlines.github.io/" />
+    <meta name="twitter:title" content="Hydro Headlines" />
+    <meta
+      name="twitter:description"
+      content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/QyjkN1R.png" />
+    <title>Hydro Headlines</title>
+    <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./js/nav.js" type="module"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles/load.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" type="text/css" href="styles/flipbook.style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <!-- Include JS -->
+    <script src="js/flipbook.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#read").flipBook({
+          //Layout Setting
+          pdfUrl: "pdf/headline(18-6).pdf",
+          lightBox: true,
+          layout: 3,
+          currentPage: { vAlign: "bottom", hAlign: "left" },
+          // BTN SETTING
+          btnShare: { enabled: false },
+          btnPrint: {
+            hideOnMobile: true,
+          },
+          btnDownloadPages: {
+            enabled: false,
+            title: "Download pages",
+            icon: "fa-download",
+            icon2: "file_download",
+            url: "images/pdf.rar",
+            name: "allPages.zip",
+            hideOnMobile: false,
+          },
+          btnColor: "rgb(255,120,60)",
+          sideBtnColor: "rgb(255,120,60)",
+          sideBtnSize: 60,
+          sideBtnBackground: "rgba(0,0,0,.7)",
+          sideBtnRadius: 60,
+          btnSound: { vAlign: "top", hAlign: "left" },
+          btnAutoplay: { vAlign: "top", hAlign: "left" },
+          // SHARING
+          btnShare: {
+            enabled: false,
+            title: "Share",
+            icon: "fa-share-alt",
+          },
+          facebook: {
+            enabled: true,
+            url: "ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+          },
+          google_plus: {
+            enabled: false,
+          },
+          email: {
+            enabled: true,
+            url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+            title: "PDF KPK",
+            description:
+              "Silahkan click link di bawah untuk melihat / mengunduf pdf",
+          },
+          twitter: {
+            enabled: true,
+            url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+          },
+          pinterest: {
+            enabled: true,
+            url: "https://ismanyan.github.io/Pdf_flipbook.demo.github.io/pdf/pdf.pdf",
+          },
+        });
+      });
+    </script>
+
+    <style>
+      #author {
+        font-size: 15px;
+        font-weight: bold;
+        color: #0186c9;
+      }
+      #date {
+        margin-left: 10px;
+        font-size: 15px;
+        color: #819196;
+      }
+      #size {
+        font-size: 15px;
+        color: #819196;
+      }
+      #description {
+        margin-top: 20px;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navigation-wrap start-header start-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <a
+                class="navbar-brand"
+                href="https://front.codes/"
+                target="_blank"
+                ><img src="./static/logo.gif" alt="hydro-logo"
+              /></a>
+              <h1 class="brand-name">Hydro Headlines</h1>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                  <!--<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        data-toggle="dropdown"
+                        href="#"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        >Home</a
+                      >
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </div>
+                    </li>-->
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <!--
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        data-toggle="dropdown"
+                        href="#"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        >News</a
+                      >
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="" class="hydro-disabled">Clan News</a>
+                        <a class="dropdown-item" href="" class="hydro-disabled">General News</a>
+                        <a class="dropdown-item" href="" class="hydro-disabled">Miscellaneous</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link" href="" class="hydro-disabled">Socials</a>
+                    </li>-->
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a
+                      class="nav-link"
+                      href="https://discord.gg/XDrfcjQJqZ "
+                      target="_blank"
+                      >Discord</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF INFORMATION -->
+    <section class="info" id="info">
+      <div class="container">
+        <div class="card shadow">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="images/book2/1.jpg" class="w-100 book-1" />
+            </div>
+            <div class="col-md-7 mt-3">
+              <!-- Info -->
+              <h3 id="title">Issue - 18/06/2023</h3>
+              <p id="author" class="d-inline">Hydro Headlines</p>
+              <p id="date" class="d-inline">18/06/2023</p>
+              <p id="size"><i class="fas fa-file"></i> File Size <b>2MB</b></p>
+              <!-- Button -->
+              <div class="button">
+                <a id="read" class="btn btn-primary mt-2 text-white"
+                  >Read Now <i class="fas fa-book-reader fa-lg"></i
+                ></a>
+                <a
+                  href="pdf/pdf.pdf"
+                  class="btn btn-primary mt-2 text-white"
+                  download
+                  >Download Issue <i class="fas fa-download fa-lg"></i
+                ></a>
+              </div>
+              <!-- Description -->
+              <!--<p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quo velit consequuntur, iste, impedit dignissimos vitae nesciunt et commodi quos quis iusto est iure tenetur eum amet quas temporibus esse praesentium incidunt sequi ratione. Fuga ab quas itaque enim, molestiae, totam, necessitatibus magni dolores eligendi obcaecati libero omnis iste. Facilis.</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF PDF INFORMATION -->
+
+  </body>
+</html>
