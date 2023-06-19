@@ -1,231 +1,285 @@
-html,
-body,
-.container-hydro {
-  height: 100%;
+/* @offsetSize * 2 means the content won't appear to move at all. Set to a lower value for squishing effects. */
+/*////////////////////////////////////////*/
+/* Layout */
+body {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 40%,
+    rgba(5, 4, 121, 1) 49%,
+    rgba(9, 9, 250, 1) 67%,
+    rgba(0, 212, 255, 1) 91%,
+    rgba(0, 212, 255, 1) 95%,
+    rgba(0, 212, 255, 1) 99%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 40%,
+    rgba(5, 4, 121, 1) 49%,
+    rgba(9, 9, 250, 1) 67%,
+    rgba(0, 212, 255, 1) 91%,
+    rgba(0, 212, 255, 1) 95%,
+    rgba(0, 212, 255, 1) 99%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 40%,
+    rgba(5, 4, 121, 1) 49%,
+    rgba(9, 9, 250, 1) 67%,
+    rgba(0, 212, 255, 1) 91%,
+    rgba(0, 212, 255, 1) 95%,
+    rgba(0, 212, 255, 1) 99%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
 }
-
-.container-hydro {
+.panels {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  pointer-events: none;
+}
+.panels__container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  flex-direction: column;
-  min-height: 100vh;
+  align-items: stretch;
+  height: 100%;
+  width: 120%;
+  margin: 0 -10%;
+  visibility: hidden;
 }
-
-.timeline {
-    margin-top: 10px;
-  flex: 1;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.2);
-}
-.timeline .swiper-container {
-  height: 600px;
-  width: 100%;
+.panel {
+  display: inline-block;
+  height: 100%;
+  visibility: visible;
   position: relative;
-}
-.timeline .swiper-wrapper {
-  transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
-}
-.timeline .swiper-slide {
-  position: relative;
-  color: #fff;
   overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  flex: 1;
+  cursor: pointer;
+  text-decoration: none;
 }
-.timeline .swiper-slide::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  right: -115%;
-  bottom: -10%;
+/*////////////////////////////////////////*/
+/* Image/Text Container */
+.panel__content {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: -230px 0 150px 60vw rgba(0, 0, 0, 0.7);
-  border-radius: 100%;
-}
-.timeline .swiper-slide-content {
-  position: absolute;
-  text-align: center;
-  width: 80%;
-  max-width: 310px;
-  right: 50%;
-  top: 13%;
-  transform: translate(50%, 0);
-  font-size: 12px;
-  z-index: 2;
-}
-.timeline .swiper-slide .timeline-year {
-  display: block;
-  font-style: italic;
-  font-size: 42px;
-  margin-bottom: 50px;
-  transform: translate3d(20px, 0, 0);
-  color: #d4a024;
-  font-weight: 300;
-  opacity: 0;
-  transition: 0.2s ease 0.4s;
-}
-.timeline .swiper-slide .timeline-title {
-  font-weight: 800;
-  font-size: 34px;
-  margin: 0 0 30px;
-  opacity: 0;
-  transform: translate3d(20px, 0, 0);
-  transition: 0.2s ease 0.5s;
-}
-.timeline .swiper-slide .timeline-text {
-  line-height: 1.5;
-  opacity: 0;
-  transform: translate3d(20px, 0, 0);
-  transition: 0.2s ease 0.6s;
-}
-.timeline .swiper-slide-active .timeline-year {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: 0.4s ease 1.6s;
-}
-.timeline .swiper-slide-active .timeline-title {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: 0.4s ease 1.7s;
-}
-.timeline .swiper-slide-active .timeline-text {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: 0.4s ease 1.8s;
-}
-.timeline .swiper-pagination {
-  right: 15% !important;
-  height: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 18px;
-  z-index: 1;
+  background: center center no-repeat;
+  background-size: cover;
 }
-.timeline .swiper-pagination::before {
+.panel__content:before {
   content: "";
   position: absolute;
-  left: -30px;
   top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  transition: opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
 }
-.timeline .swiper-pagination-bullet {
-  width: auto;
-  height: auto;
-  text-align: center;
-  opacity: 1;
-  background: transparent;
-  color: #d4a024;
-  margin: 15px 0 !important;
+/*////////////////////////////////////////*/
+/* Title */
+.panel__title {
+  pointer-events: auto;
+  color: #fff;
   position: relative;
+  z-index: 1;
+  transition: color 1s cubic-bezier(0.6, 0, 0.2, 1);
 }
-.timeline .swiper-pagination-bullet::before {
+.panel__title:before {
   content: "";
   position: absolute;
-  top: 8px;
-  left: -32.5px;
-  width: 6px;
-  height: 6px;
-  border-radius: 100%;
-  background-color: #d4a024;
-  transform: scale(0);
-  transition: 0.2s;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  border: solid 2px #ffc12d;
+  z-index: -1;
+  padding: 0.5em 1em;
+  margin: -0.5em -1em;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s cubic-bezier(0.6, 0, 0.2, 1);
+  transition-property: opacity, transform;
 }
-.timeline .swiper-pagination-bullet-active {
-  color: #d4a024;
+/*////////////////////////////////////////*/
+/* Hover States */
+.panel {
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+  /* Inactive panel */
+  /* Override styles for an inactive panel AFTER the hovered panel */
+  /* Active panel */
 }
-.timeline .swiper-pagination-bullet-active::before {
+.panel .panel__content {
+  transform: translateX(10%);
+  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+}
+.panel:last-child .panel__content {
+  transform: translateX(-10%);
+}
+.panels:hover .panel {
+  transform: translate3d(-10%, 0, 0);
+}
+.panels:hover .panel .panel__content {
+  transform: translateX(14%);
+}
+.panels:hover .panel .panel__content:before {
+  opacity: 0.7;
+}
+.panels .panel:hover ~ .panel {
+  transform: translate3d(10%, 0, 0);
+}
+.panels .panel:hover ~ .panel .panel__content {
+  transform: translateX(-14%);
+}
+.panels .panel:hover {
+  z-index: 2;
+  transform: translate3d(10%, 0, 0);
+  pointer-events: auto;
+}
+.panels .panel:hover:last-child {
+  transform: translate3d(-10%, 0, 0);
+}
+.panels .panel:hover .panel__content {
+  transform: translateX(0%);
+}
+.panels .panel:hover .panel__content:before {
+  opacity: 0;
+}
+.panels .panel:hover .panel__title {
+  color: #ffc12d;
+}
+.panels .panel:hover .panel__title:before {
+  opacity: 1;
   transform: scale(1);
 }
-.timeline .swiper-button-next,
-.timeline .swiper-button-prev {
-  background-size: 20px 20px;
-  top: 15%;
-  width: 20px;
-  height: 20px;
-  margin-top: 0;
-  z-index: 2;
-  transition: 0.2s;
+/*////////////////////////////////////////*/
+/* Vertical layout */
+.panels--stacked {
+  /* Inactive panel */
+  /* Override styles for an inactive panel AFTER the hovered panel */
+  /* Active panel */
 }
-.timeline .swiper-button-prev {
-  left: 8%;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+.panels--stacked .panels__container {
+  width: 100%;
+  height: 120%;
+  margin: -10% 0;
+  flex-direction: column;
 }
-.timeline .swiper-button-prev:hover {
-  transform: translateX(-3px);
+.panels--stacked .panel {
+  height: 50%;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
 }
-.timeline .swiper-button-next {
-  right: 8%;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+.panels--stacked .panel .panel__content {
+  transform: translate3d(0, 10%, 0);
 }
-.timeline .swiper-button-next:hover {
-  transform: translateX(3px);
+.panels--stacked .panel:last-child .panel__content {
+  transform: translate3d(0, -10%, 0);
 }
-@media screen and (min-width: 768px) {
-  .timeline .swiper-slide::after {
-    right: -30%;
-    bottom: -8%;
-    width: 240px;
+.panels--stacked:hover .panel {
+  transform: translate3d(0, -10%, 0);
+}
+.panels--stacked:hover .panel .panel__content {
+  transform: translate3d(0, 14%, 0);
+}
+.panels--stacked .panel:hover ~ .panel {
+  transform: translate3d(0, 10%, 0);
+}
+.panels--stacked .panel:hover ~ .panel .panel__content {
+  transform: translate3d(0, -14%, 0);
+}
+.panels--stacked .panel:hover {
+  transform: translate3d(0, 10%, 0);
+}
+.panels--stacked .panel:hover:last-child {
+  transform: translate3d(0, -10%, 0);
+}
+.panels--stacked .panel:hover .panel__content {
+  transform: translate3d(0, 0, 0);
+}
+/* Responsive */
+@media (max-width: 550px) {
+  .panels {
+    /* Inactive panel */
+    /* Override styles for an inactive panel AFTER the hovered panel */
+    /* Active panel */
+  }
+  .panels .panels__container {
+    width: 100%;
+    height: 120%;
+    margin: -10% 0;
+    flex-direction: column;
+  }
+  .panels .panel {
     height: 50%;
-    box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
+    width: 100%;
+    transform: translate3d(0, 0, 0);
   }
-  .timeline .swiper-slide-content {
-    right: 30%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 310px;
-    font-size: 11px;
-    text-align: right;
+  .panels .panel .panel__content {
+    transform: translate3d(0, 10%, 0);
   }
-  .timeline .swiper-slide .timeline-year {
-    margin-bottom: 0;
-    font-size: 32px;
+  .panels .panel:last-child .panel__content {
+    transform: translate3d(0, -10%, 0);
   }
-  .timeline .swiper-slide .timeline-title {
-    font-size: 46px;
-    margin: 0;
+  .panels:hover .panel {
+    transform: translate3d(0, -10%, 0);
   }
-  .timeline .swiper-pagination {
-    display: flex;
+  .panels:hover .panel .panel__content {
+    transform: translate3d(0, 14%, 0);
   }
-  .timeline .swiper-button-prev {
-    top: 15%;
-    left: auto;
-    right: 15%;
-    transform: rotate(90deg) translate(0, 10px);
+  .panels .panel:hover ~ .panel {
+    transform: translate3d(0, 10%, 0);
   }
-  .timeline .swiper-button-prev:hover {
-    transform: rotate(90deg) translate(-3px, 10px);
+  .panels .panel:hover ~ .panel .panel__content {
+    transform: translate3d(0, -14%, 0);
   }
-  .timeline .swiper-button-next {
-    top: auto;
-    bottom: 15%;
-    right: 15%;
-    transform: rotate(90deg) translate(0, 10px);
+  .panels .panel:hover {
+    transform: translate3d(0, 10%, 0);
   }
-  .timeline .swiper-button-next:hover {
-    transform: rotate(90deg) translate(3px, 10px);
+  .panels .panel:hover:last-child {
+    transform: translate3d(0, -10%, 0);
+  }
+  .panels .panel:hover .panel__content {
+    transform: translate3d(0, 0, 0);
   }
 }
-@media screen and (min-width: 1024px) {
-  .timeline .swiper-slide::after {
-    right: -20%;
-    bottom: -12%;
-    width: 240px;
-    height: 50%;
-    box-shadow: -230px 0 150px 39vw rgba(0, 0, 0, 0.7);
+/*////////////////////////////////////////*/
+/* Specific Design Setup */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf)
+    format("truetype");
+}
+.panel__title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+}
+@media (max-width: 800px) {
+  .panel__title {
+    font-size: 1.5em;
   }
-  .timeline .swiper-slide-content {
-    right: 25%;
+}
+@media (max-width: 600px) {
+  .panel__title {
+    font-size: 1.25em;
   }
+}
+html,
+body {
+  height: 100%;
 }
