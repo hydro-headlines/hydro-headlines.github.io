@@ -31,12 +31,18 @@
       content="The Hydro Headlines is a Newspaper service that collects data around the war seas for everyone to read!"
     />
     <meta name="twitter:image" content="https://i.imgur.com/QyjkN1R.png" />
-    <title>Hydro Headlines</title>
+    <title>Hydro Headlines - News</title>
     <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="./js/nav.js" type="module"></script>
+    <script type="module" src="./js/table.js"></script>
 
     <link
       rel="stylesheet"
@@ -44,7 +50,7 @@
     />
     <link rel="stylesheet" href="./styles/load.css" />
     <link rel="stylesheet" href="./styles/nav.css" />
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/table.css" />
   </head>
   <body class="hero-anime">
     <div class="navigation-wrap start-header start-style">
@@ -115,9 +121,6 @@
                     </div>
                   </li>-->
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                    <a class="nav-link" href="/news.html" >News</a>
-                  </li>
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                     <a
                       class="nav-link"
                       href="https://discord.gg/XDrfcjQJqZ "
@@ -132,12 +135,19 @@
         </div>
       </div>
     </div>
-      <div class="image-container">
-        <img
-          src="./static/snapshot.png"
-          alt="snapshot"
-          class="snapshot-image"
-        />
+    <div class="panels">
+      <div class="panels__container">
+        <a href="/snapshot-list.html" class="panel">
+          <div class="panel__content" style="background-image: url(https://media.thenerdstash.com/wp-content/uploads/2023/03/How-to-Beat-Cernyx-in-Arcane-Odyssey.jpg.webp);">
+          <h3 class="panel__title">SnapShots</h3>
+          </div>
+        </a>
+        <a href="/news-list.html" class="panel">
+          <div class="panel__content" style="background-image: url(https://pbs.twimg.com/media/FPxNdceXsAAGWCV.jpg)">
+          <h3 class="panel__title">News</h3>
+          </div>
+        </a>
+      </div>
       </div>
   </body>
 </html>

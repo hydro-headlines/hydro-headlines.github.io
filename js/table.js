@@ -1,10 +1,10 @@
 function updateImageContainerMargin() {
   var navHeight = document.querySelector(".navigation-wrap").offsetHeight;
-  var imageContainer = document.querySelector(".panels");
+  var imageContainer = document.querySelector(".panels_container");
   imageContainer.style.marginTop = navHeight + "px";
 }
 var navHeight = document.querySelector(".navigation-wrap").offsetHeight;
-var imageContainer = document.querySelector(".panels");
+var imageContainer = document.querySelector(".panels_container");
 imageContainer.style.marginTop = navHeight + "px";
 // Call the function initially
 updateImageContainerMargin();

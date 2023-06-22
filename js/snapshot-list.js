@@ -71,3 +71,19 @@ elements.forEach((element) => {
     // Add your desired actions or behavior here
   });
 });
+
+(async () => {
+  const imageElements = document.querySelectorAll('[date]');
+  for (const element of imageElements) {
+    const requiredDate = element.getAttribute('date');
+    console.log(`${window.location.origin}/pdf/snapshot/${requiredDate}/snapshot.png`);
+    element.style.backgroundImage = `url(${window.location.origin}/pdf/snapshot/${requiredDate}/snapshot.png)`;
+  }
+
+  const hrefElements = document.querySelectorAll('[read-date]');
+  for (const element of hrefElements) {
+    const requiredDate = element.getAttribute('read-date');
+    element.href = `${window.location.origin}/snapshot.html?date=${requiredDate}`
+  }
+})();
+
