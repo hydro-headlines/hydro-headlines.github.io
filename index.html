@@ -48,7 +48,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./styles/load.css" />
     <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./styles/table.css" />
   </head>
@@ -60,11 +59,10 @@
             <nav class="navbar navbar-expand-md navbar-light">
               <a
                 class="navbar-brand"
-                href="https://front.codes/"
-                target="_blank"
+                href="/"
                 ><img src="./static/logo.gif" alt="hydro-logo"
               /></a>
-              <h1 class="brand-name">Hydro Headlines</h1>
+              <h1 class="brand-name" style="cursor: pointer;" onclick="window.location.href = `/`">Hydro Headlines</h1>
 
               <button
                 class="navbar-toggler"

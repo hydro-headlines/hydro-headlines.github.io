@@ -1,13 +1,28 @@
-:root {
-  --v1: #be91c6;
-  --v2: #8a65cc;
-  --v3: #5e30d9;
-  --transparentv3: #5e30d900;
-  --v4: #3b1895;
-  --s1: #fea798;
-  --s2: #ff846e;
-  --cloud: #fea798;
+.back-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0; /* Set your desired background color */
+  z-index: -100;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
+
+:root {
+  --v1: #0077be;  /* Deep blue */
+  --v2: #005c94;  /* Dark blue */
+  --v3: #004769;  /* Medium blue */
+  --transparentv3: #00476900;  /* Transparent medium blue */
+  --v4: #002d47;  /* Darker blue */
+  --s1: #00a2e8;  /* Sky blue */
+  --s2: #00bfff;  /* Light blue */
+  --cloud: #00bfff;  /* Light blue */
+}
+
 
 .landscape:after,
 .landscape:before,
@@ -87,11 +102,7 @@
 .lotus {
   width: 10vmin;
   height: 5vmin;
-  background: conic-gradient(
-    var(--v3) 0deg 40deg,
-    var(--transparentv3) 50deg 70deg,
-    var(--v3) 80deg
-  );
+  background: conic-gradient(var(--v3) 0deg 40deg, var(--transparentv3) 50deg 70deg, var(--v3) 80deg);
   border-radius: 50%;
 }
 
@@ -126,14 +137,13 @@
   top: 24vmin;
   left: 20vmin;
   border-radius: 50%;
-  box-shadow: 30vmin 0.5vmin 0 -1vmin currentcolor,
-    -25vmin 0 0 -0.6vmin currentcolor;
+  box-shadow: 30vmin 0.5vmin 0 -1vmin currentcolor, -25vmin 0 0 -0.6vmin currentcolor;
   opacity: 0.3;
   transform: translate3d(-150vmin, 0, 0);
   -webkit-animation: clouds 120s infinite;
-  animation: clouds 120s infinite;
+          animation: clouds 120s infinite;
   -webkit-animation-delay: -10s;
-  animation-delay: -10s;
+          animation-delay: -10s;
 }
 
 @-webkit-keyframes clouds {
@@ -159,9 +169,9 @@
   opacity: 0.2;
   filter: blur(1px);
   -webkit-animation-delay: 0;
-  animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-duration: 100s;
-  animation-duration: 100s;
+          animation-duration: 100s;
 }
 
 .water {
@@ -203,8 +213,7 @@
   bottom: 0;
   border-right: 5px solid var(--v4);
   box-shadow: 1px 0 0 var(--s1);
-  filter: drop-shadow(-0.5vmin 6vmin 0 var(--s2))
-    drop-shadow(-4.5vmin 10vmin 0 var(--v3));
+  filter: drop-shadow(-0.5vmin 6vmin 0 var(--s2)) drop-shadow(-4.5vmin 10vmin 0 var(--v3));
 }
 
 .grass-1 {
@@ -213,8 +222,7 @@
   transform: scaleX(-1);
   box-shadow: 2px 0 0 var(--v4);
   border-color: var(--v3);
-  filter: drop-shadow(-1vmin 5vmin 0 var(--v3))
-    drop-shadow(-80vmin 5vmin 0 var(--v4));
+  filter: drop-shadow(-1vmin 5vmin 0 var(--v3)) drop-shadow(-80vmin 5vmin 0 var(--v4));
 }
 
 .grass-2 {
@@ -226,7 +234,7 @@
 }
 
 .sun {
-  background: white;
+  background: #f9f9f9;  /* Moon color */
   border-radius: 50%;
   width: 20vmin;
   height: 20vmin;
@@ -234,9 +242,10 @@
   top: 100%;
   transform: translate3d(0, 0, 0);
   -webkit-animation: rise 20s infinite;
-  animation: rise 20s infinite;
-  box-shadow: 0 0 10px white;
+          animation: rise 20s infinite;
+  box-shadow: 0 0 10px #f9f9f9;  /* Moon color */
 }
+
 
 .reed {
   height: 40vmin;
@@ -249,7 +258,7 @@
   transform: rotate(4deg);
   box-shadow: inset -1px 0 0 var(--s2), -6vmin 3vmin 0 0, 80vmin 0 0 0;
   -webkit-animation: verticalise 20s infinite;
-  animation: verticalise 20s infinite;
+          animation: verticalise 20s infinite;
 }
 
 .reed-1 {
@@ -259,9 +268,8 @@
   bottom: -5vmin;
   transform: rotate(-2deg);
   -webkit-animation: verticalise-1 20s infinite;
-  animation: verticalise-1 20s infinite;
-  box-shadow: inset -1px 0 0 var(--s1), 6vmin 13vmin 0 0 var(--s1),
-    80vmin 10vmin 0 0 var(--v3);
+          animation: verticalise-1 20s infinite;
+  box-shadow: inset -1px 0 0 var(--s1), 6vmin 13vmin 0 0 var(--s1), 80vmin 10vmin 0 0 var(--v3);
 }
 
 .reed:after {
@@ -276,43 +284,35 @@
 }
 
 @-webkit-keyframes verticalise {
-  0%,
-  10% {
+  0%, 10% {
     transform: rotate(4deg);
   }
-  30%,
-  70% {
+  30%, 70% {
     transform: rotate(0);
   }
 }
 
 @keyframes verticalise {
-  0%,
-  10% {
+  0%, 10% {
     transform: rotate(4deg);
   }
-  30%,
-  70% {
+  30%, 70% {
     transform: rotate(0);
   }
 }
 @-webkit-keyframes verticalise-1 {
-  0%,
-  10% {
+  0%, 10% {
     transform: rotate(-2deg);
   }
-  45%,
-  70% {
+  45%, 70% {
     transform: rotate(0) translateY(-6vmin);
   }
 }
 @keyframes verticalise-1 {
-  0%,
-  10% {
+  0%, 10% {
     transform: rotate(-2deg);
   }
-  45%,
-  70% {
+  45%, 70% {
     transform: rotate(0) translateY(-6vmin);
   }
 }
@@ -360,7 +360,7 @@
   bottom: 0;
   background: radial-gradient(circle at 60% 100%, var(--s2), transparent);
   -webkit-animation: fade 20s infinite;
-  animation: fade 20s infinite;
+          animation: fade 20s infinite;
   mix-blend-mode: color-burn;
 }
 
@@ -368,8 +368,7 @@
   10% {
     opacity: 1;
   }
-  30%,
-  70% {
+  30%, 70% {
     opacity: 0;
   }
 }
@@ -378,8 +377,7 @@
   10% {
     opacity: 1;
   }
-  30%,
-  70% {
+  30%, 70% {
     opacity: 0;
   }
 }
@@ -396,7 +394,7 @@
   top: 0;
   transform: translate3d(0, -20vmin, 0);
   -webkit-animation-name: rise-reflection;
-  animation-name: rise-reflection;
+          animation-name: rise-reflection;
 }
 
 .light {
@@ -408,7 +406,7 @@
   margin: auto;
   top: calc(50% + 1vmin);
   -webkit-animation: light 20s infinite;
-  animation: light 20s infinite;
+          animation: light 20s infinite;
   opacity: 0;
   transform: scaleX(0.1) translate3d(0%, 0, 0);
   border-radius: 0.25vh;
@@ -454,49 +452,49 @@
 .light-1 {
   top: calc(50% + 2vmin);
   -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .light-2 {
   top: calc(50% + 3vmin);
   width: 18vmin;
   -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .light-3 {
   top: calc(50% + 4vmin);
   width: 18vmin;
   -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .light-4 {
   top: calc(50% + 5vmin);
   width: 16vmin;
   -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .light-5 {
   top: calc(50% + 8vmin);
   width: 14vmin;
   -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .light-6 {
   top: calc(50% + 9vmin);
   width: 10vmin;
   -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .light-7 {
   top: calc(50% + 7vmin);
   width: 12vmin;
   -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 .splash {
@@ -508,7 +506,7 @@
   bottom: 5vmin;
   left: 70%;
   -webkit-animation: splash 9s infinite;
-  animation: splash 9s infinite;
+          animation: splash 9s infinite;
   transform: scale(0);
 }
 
@@ -527,46 +525,44 @@
 }
 
 @-webkit-keyframes splash {
-  50%,
-  100% {
+  50%, 100% {
     transform: scale(1);
     opacity: 0;
   }
 }
 
 @keyframes splash {
-  50%,
-  100% {
+  50%, 100% {
     transform: scale(1);
     opacity: 0;
   }
 }
 .delay-1 {
   -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .delay-2 {
   -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .delay-3 {
   -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .delay-4 {
   -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .delay-5 {
   -webkit-animation-delay: 5s;
-  animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .delay-6 {
   -webkit-animation-delay: 6s;
-  animation-delay: 6s;
+          animation-delay: 6s;
 }

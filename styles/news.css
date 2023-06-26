@@ -13,9 +13,3 @@
   max-width: 60%;
   margin-bottom: 20px; /* Adjust the gap size between images */
 }
-body {
-    background-image: url("../static/bg-2.png");
-  /* Additional background properties if needed */
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
