@@ -1,6 +1,6 @@
 body {
-    background-image: url("../static/bg-2.png");
-    /* Additional background properties if needed */
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../static/bg-2.png");
+  /* Additional background properties if needed */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
