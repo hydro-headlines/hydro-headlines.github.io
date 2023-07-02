@@ -34,37 +34,15 @@ section {
   float: right;
   padding: 40px 30px 10px 30px;
   background: rgb(2, 0, 36);
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(2, 0, 36, 1) 40%,
-    rgba(5, 4, 121, 1) 49%,
-    rgba(9, 9, 250, 1) 67%,
-    rgba(0, 212, 255, 1) 91%,
-    rgba(0, 212, 255, 1) 95%,
-    rgba(0, 212, 255, 1) 99%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(2, 0, 36, 1) 40%,
-    rgba(5, 4, 121, 1) 49%,
-    rgba(9, 9, 250, 1) 67%,
-    rgba(0, 212, 255, 1) 91%,
-    rgba(0, 212, 255, 1) 95%,
-    rgba(0, 212, 255, 1) 99%
-  );
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(2, 0, 36, 1) 40%,
-    rgba(5, 4, 121, 1) 49%,
-    rgba(9, 9, 250, 1) 67%,
-    rgba(0, 212, 255, 1) 91%,
-    rgba(0, 212, 255, 1) 95%,
-    rgba(0, 212, 255, 1) 99%
+    rgba(2, 0, 36, 1) 36%,
+    rgba(5, 4, 121, 1) 72%,
+    rgba(9, 9, 250, 1) 100%,
+    rgba(0, 212, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
 }
 
 .timeline-item:nth-child(even) .timeline-content .date {
@@ -96,37 +74,15 @@ section {
   padding: 10px 30px;
   border-radius: 4px; /* Black background color */
   background: rgb(2, 0, 36);
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(2, 0, 36, 1) 40%,
-    rgba(5, 4, 121, 1) 49%,
-    rgba(9, 9, 250, 1) 67%,
-    rgba(0, 212, 255, 1) 91%,
-    rgba(0, 212, 255, 1) 95%,
-    rgba(0, 212, 255, 1) 99%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(2, 0, 36, 1) 40%,
-    rgba(5, 4, 121, 1) 49%,
-    rgba(9, 9, 250, 1) 67%,
-    rgba(0, 212, 255, 1) 91%,
-    rgba(0, 212, 255, 1) 95%,
-    rgba(0, 212, 255, 1) 99%
-  );
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(2, 0, 36, 1) 40%,
-    rgba(5, 4, 121, 1) 49%,
-    rgba(9, 9, 250, 1) 67%,
-    rgba(0, 212, 255, 1) 91%,
-    rgba(0, 212, 255, 1) 95%,
-    rgba(0, 212, 255, 1) 99%
+    rgba(2, 0, 36, 1) 36%,
+    rgba(5, 4, 121, 1) 72%,
+    rgba(9, 9, 250, 1) 100%,
+    rgba(0, 212, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
   color: #ffffff; /* White text color */
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
 }
@@ -155,9 +111,17 @@ section {
 }
 
 .a-timeline {
-  background-color: #50d8d7;
-  background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%);
-
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(5, 4, 121, 1) 0%,
+    rgba(9, 9, 250, 1) 0%,
+    rgba(0, 212, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   color: #ffffff; /* White text color */
   padding: 8px 20px;
   text-transform: uppercase;
