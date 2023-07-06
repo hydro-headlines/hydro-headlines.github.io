@@ -60,6 +60,8 @@
     navHeight += 10;
     imageContainer.style.marginTop = navHeight + "px";
   }
+
+  try {
   var navHeight = document.querySelector(".navigation-wrap").offsetHeight;
   var imageContainer = document.querySelector(".image-container");
   navHeight += 10;
@@ -82,4 +84,7 @@
       // Add your desired actions or behavior here
     });
   });
+} catch (e) {
+  console.log(e);
+}
   

@@ -1,0 +1,12 @@
+.custom-popup {
+  border: 2px solid #3498db;
+  border-radius: 8px;
+}
+.custom-confirm-btn {
+  background-color: #3498db !important; 
+  color: white !important;
+}
+.custom-close-btn {
+    background-color: #db3434 !important; 
+    color: white !important;
+  }
